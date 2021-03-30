@@ -49,5 +49,5 @@ for button in range(10):
     #go back to players page
     driver.find_element_by_class_name('btn-rect').click()
 
-
+driver.quit()
 
