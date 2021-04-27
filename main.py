@@ -7,8 +7,10 @@ from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.action_chains import ActionChains
 import time
 
-DRIVER_PATH = 'C:\\Users\\mario\\Desktop\\chromedriver.exe'
+#change this path to where you are placing chromedriver.exe
+DRIVER_PATH = "C://Users//mario.gayed//Desktop//chromedriver.exe"
 driver = webdriver.Chrome(executable_path=DRIVER_PATH)
+
 driver.maximize_window()
 driver.get('https://www.liverpoolfc.com/')
 
@@ -20,8 +22,7 @@ history_link.click()
 
 heroes = driver.find_element_by_xpath('//*[@id="cms-block-19397"]/div/a/h2')
 heroes.click()
-
-#players = []
+players = []
 for button in range(10):
     #navigate to the Nth player info page
     players_button = driver.find_elements_by_class_name('btn-circle')
